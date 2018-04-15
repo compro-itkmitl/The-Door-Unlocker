@@ -1,6 +1,6 @@
 #include <SD.h>
 #include <SPI.h>
-#define CS 4
+
 File myFile;
 
 int id=0, dataNum=2;
@@ -30,7 +30,7 @@ void setup() {
 }
 
 void loop() {
-    if (SD.begin(CS)) {
+    if (SD.begin(4)) {
         //============Define port zone=============
         data[0] = analogRead(dat1);
         data[1] = 5;
@@ -73,17 +73,17 @@ void loop() {
         }
     } else {
         Serial.println("Card not found.");
-        while (!SD.begin(CS)) {
+        while (!SD.begin(4)) {
             ;
         }
     }
     delay(2000);
 }
 
-void checkSD(){
+void checkSD(int cs){
     Serial.println("Checking SD card...");
     delay(300);
-    if (!SD.begin(CS)) {
+    if (!SD.begin(cs)) {
         Serial.println("Card failed.");
         return;
     }
@@ -104,4 +104,3 @@ void writeSD(File myFile, String fileName, int dataNum){
         myFile.close();
     }
 }
-
