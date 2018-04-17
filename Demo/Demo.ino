@@ -23,7 +23,7 @@ void setup() {
     //==============label part===================
     myFile = SD.open(fileName, FILE_WRITE);
     if (myFile) {
-        myFile.println("ID,Data1,Data2");
+        myFile.println("ID,BLETH,KBNCK_PAT");
         myFile.close();
     }
     //===========================================
