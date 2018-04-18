@@ -19,7 +19,7 @@ void writeSD(File myFile, String fileName, int dataNum){
     if (myFile) {
         myFile.print(id);
         for (int i=0; i < dataNum; i++) {
-            myFile.print(","); myFile.print(data[i], 2); 
+            myFile.print(","); myFile.print(data[i]); 
         }
         myFile.println(); //new line for next data
         myFile.close();
