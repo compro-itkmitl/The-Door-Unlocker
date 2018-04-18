@@ -32,7 +32,7 @@ void setup() {
 void loop() {
     if (SD.begin(4)) {
         //============Define port zone=============
-        data[0] = analogRead(dat1);
+        data[0] = analogRead(dat1);  // Bluetooth mac address
         data[1] = 5;
         if (First_round == 1) {
             id++;
@@ -92,13 +92,13 @@ void checkSD(int cs){
 }
 
 
-void writeSD(File myFile, String fileName, int dataNum){
+void writeSD(File myFile, String fileName, int dataNum) {
     //you have to define ur header by your own in data[]
     myFile = SD.open(fileName, FILE_WRITE);
     if (myFile) {
         myFile.print(id);
         for (int i=0; i < dataNum; i++) {
-            myFile.print(","); myFile.print(data[i], 2); 
+            myFile.print(","); myFile.print(data[i]); 
         }
         myFile.println(); //new line for next data
         myFile.close();
