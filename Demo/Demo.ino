@@ -6,7 +6,7 @@ File myFile;
 int id=0, dataNum=2;
 int dat1=A0/*, dat2=A1*/;
 bool  First_round = 1;
-float data[20] = {0} ,temp[20] = {0};
+String data[20] = {""} ,temp[20] = {""};
 
 String fileName = "test.txt";
 
