@@ -1,9 +1,9 @@
-long TP_init(int vib_pin){
+long TP_init(){
 	delay(10);
 	return pulseIn(vib_pin, HIGH);
 }
 
-void vibration_controller(int vib_pin, int is_new, int password[]){
+void vibration_controller(int is_new, int password[]){
 	if(is_new){// 1 is new member(not register yet) go register_func
 		Serial.println("setting register...");
 		delay(100);
