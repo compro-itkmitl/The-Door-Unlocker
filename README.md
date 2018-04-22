@@ -37,12 +37,14 @@
 
 ### 🔌 How to use
 
+|<img src="pic/how to use.png" alt="how to use">|
+
 มีสองวิธีในการใช้งาน
 
 1. ใช้วิธีเชื่อม Bluetooth
 2. ใช้วิธีการเคาะประตูตามจังหวะ
 
----
+
 
 ### 🐼 Our Team
 
