@@ -13,16 +13,16 @@
 | :--------: | :--------: | :--------: | :--------: | 
 |   ![Arduino UNO R3 ](pic/arduino.png)   |   ![Vibration sensor SW-420](pic/sw420.jpg)|   ![Motor](pic/motor.jpg)   |   ![SD Card](pic/sdcard.jpg)   | 
 
-| Motor Driver A4988 | Wires | 3D Model | Door Knob Grip Handle |
-| :--------: | :--------: | :--------: | :--------: |
-|   ![Motor Driver A4988](pic/motordriver.jpg)   |   ![Wires](pic/wire.jpg)  |  ![3D Model](pic/3dmodel.png)   | ![Door Knob Grip Handle](pic/doorknob.jpg)  |
+| Motor Driver A4988 | Wires | 3D Model | Door Knob Grip Handle | Potentiometer |
+| :--------: | :--------: | :--------: | :--------: |:--------: | 
+|   ![Motor Driver A4988](pic/motordriver.jpg)   |   ![Wires](pic/wire.jpg)  |  ![3D Model](pic/3dmodel.png)   | ![Door Knob Grip Handle](pic/doorknob.jpg)  | ![Potentiometer](https://i.imgur.com/mRxvNqv.jpg)|
 
 ---
 
 ### 📚 Library
 
-1. SD
-2. SPI
+1. SD Library [https://github.com/arduino-libraries/SD](https://github.com/arduino-libraries/SD)
+2. SPI Library [https://github.com/arduino-libraries/SD](https://github.com/arduino-libraries/SD)
 
 ---
 
