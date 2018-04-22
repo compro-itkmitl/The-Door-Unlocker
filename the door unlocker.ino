@@ -60,7 +60,7 @@ void setup(){
 
 void loop()
 {
-    if(1){//bluetooth func available
+    if(is_insystem()){//bluetooth func available
 
         for (int i = 0; i < count; ++i)
         {
@@ -73,6 +73,9 @@ void loop()
 
 }
 
+void is_insystem(){
+    
+}
 
 void register_bt(){
 

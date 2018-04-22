@@ -15,12 +15,28 @@ void reAdy_knock(string password[]){
         delay(200);
         digitalWrite(tone_pin, LOW);
         check = 0;
+        afk = 0;
+        continue;
        }
-    if (messure == 0) afk++;
 
-    if(messure == password[check]) check++;
+    if (messure == 0) 
+      {
+        afk++;
+        continue;
+      }
 
-    if (check == 4){
+    Serial.print("Messure = ");
+    Serial.println(messure);
+
+    if(password[check]+2000 > messure > password[check]+2000) check++;
+    else{
+      check = 0;
+      digitalWrite(tone_pin, HIGH);
+      delay(200);
+      digitalWrite(tone_pin, LOW);
+    }
+
+    if (check == 5){
       digitalWrite(tone_pin, HIGH);
       delay(100);
       digitalWrite(tone_pin, LOW);
