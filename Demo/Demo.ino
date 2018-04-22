@@ -19,7 +19,7 @@ void setup() {
         ;
     }
     //checking sd card before enter the void loop.
-    checkSD(); 
+    checkSD(4); 
     //==============label part===================
     myFile = SD.open(fileName, FILE_WRITE);
     if (myFile) {

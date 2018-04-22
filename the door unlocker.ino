@@ -1,6 +1,8 @@
 #include <SD.h>
 #include <SPI.h>
 
+
+//======== Define port=============
 #define vib_pin  //vibration sensor
 #define tone_pin  //buzzer
 #define MOSI 11
@@ -17,22 +19,21 @@ bool  First_round = 1;
 String data[20] = {""} ,temp[20] = {""};
 
 String fileName = "test.txt";
+String strmyFile = "";
 
 
 void setup(){
 	//setup pin
 
 	pinMode(tone_pin, OUTPUT);
-	pinMode(cs, INPUT);
 
+	pinMode(cs, INPUT);
 	pinMode(dat1,INPUT);
 	pinMode(vib_pin, INPUT);
 	pinMode(MOSI, INPUT);
 	pinMode(MISO, INPUT);
 	pinMode(CLK, INPUT);
 	pinMode(data1, INPUT);
-
-
 //    pinMode(dat2,INPUT);
 
     Serial.begin(9600);
@@ -47,5 +48,24 @@ void setup(){
         myFile.println("ID,BLETH,KBNCK_PAT");
         myFile.close();
     }
-    //===========================================
+    //====check id====
+    //==============convert text in .txt in be string==========
+    while (myFile.available()) {
+        char ltr = myFile.read();
+        strmyFile += ltr;
+    }
+    //=====================================
+}
+
+
+void void loop()
+{
+    if(1){//bluetooth func
+
+        for (int i = 0; i < count; ++i)
+        {
+            /* code */
+        }
+
+    }
 }
