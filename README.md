@@ -28,11 +28,11 @@
 
 ### ☁️ Installation
 
- Download and Install Arduino IDE
-  1. Go to https://www.arduino.cc/ and click on **SOFTWARE** menu and select **DOWNLOADS**
-  2. Select computer's operating system for coding on Arduino IDE.
-  3. Click on **JUST DOWNLOAD** for download program or **CONTRIBUTE & DOWNLOAD** for donate developer and download program.
-  4. Unzip the file and run arduino.exe for installation Arduino IDE.
+Download and Install Arduino IDE
+1. Go to https://www.arduino.cc/ and click on **SOFTWARE** menu and select **DOWNLOADS**
+2. Select computer's operating system for coding on Arduino IDE.
+3. Click on **JUST DOWNLOAD** for download program or **CONTRIBUTE & DOWNLOAD** for donate developer and download program.
+4. Unzip the file and run arduino.exe for installation Arduino IDE.
 
 ---
 
