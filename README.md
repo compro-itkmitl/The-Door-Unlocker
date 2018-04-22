@@ -58,7 +58,7 @@
 
 ### 🐼 Our Team | สมาชิกกลุ่ม
 
-|<a href="https://www.facebook.com/Rew.Tinnapat.Plangsri"><img src="pic/profile/60070028.jpg" width="200px"></a>|<a href="https://www.facebook.com/tt.taitana"><img src="pic/profile/60070029.jpg" width="200px"></a>|<a href="https://www.facebook.com/no.jk21"><img src="pic/profile/6007031.jpg" width="200px"></a>|
+|<a href="https://www.facebook.com/Rew.Tinnapat.Plangsri"><img src="pic/profile/60070028.jpg" width="200px"></a>|<a href="https://www.facebook.com/tt.taitana"><img src="pic/profile/60070029.jpg" width="200px"></a>|<a href="https://www.facebook.com/no.jk21"><img src="pic/profile/60070031.jpg" width="200px"></a>|
 | :--------: | :--------: | :--------: |
 | <b> [@tintinap](https://github.com/tintinap) | <b> [@wannowo](https://github.com/wannowo) | <b> [@jacktnp](https://github.com/jacktnp) |
 | <b>Tinnapat Plungsri | <b>Taitana Yuume | <b>Thanapon Wongprasert |
