@@ -14,14 +14,14 @@
 File myFile;
 
 int id=0, dataNum=2;
-//int dat1=A0/*, dat2=A1*/;
+
 bool  First_round = 1;
 String data[20] = {""} ,temp[20] = {""};
 
 String fileName = "test.txt";
 String strmyFile = "";
 
-void setup(){
+void setup() {
     //setup pin
     pinMode(tone_pin, OUTPUT);
 
@@ -63,7 +63,7 @@ void loop() {
     if (chipSelectConnected(cs)) {
         //============Define port zone=============
         data[0] = analogRead(data1);  // Bluetooth mac address
-        data[1] = 5;
+        data[1] = "[7:8:9:8:6]"; // knockong pattern
         //===============checking text in the file================
         strmyFile = "";
         while (myFile.available()) {
