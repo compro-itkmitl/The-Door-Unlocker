@@ -1,4 +1,4 @@
-long TP_init(){
+int TP_init(){
   delay(10);
   return pulseIn(vib_pin, HIGH);
 }
@@ -7,12 +7,12 @@ void reAdy_knock(string password[]){
   int check = 0, afk = 0;
   while(bluetooth avaliable){
     delay(100);
-    long messure = TP_init();
+    int messure = TP_init();
 
     if (afk == 5) 
       {
         digitalWrite(tone_pin, HIGH);
-        delay(200);
+        delay(300);
         digitalWrite(tone_pin, LOW);
         check = 0;
         afk = 0;
@@ -32,7 +32,7 @@ void reAdy_knock(string password[]){
     else{
       check = 0;
       digitalWrite(tone_pin, HIGH);
-      delay(200);
+      delay(300);
       digitalWrite(tone_pin, LOW);
     }
 
@@ -44,7 +44,7 @@ void reAdy_knock(string password[]){
       delay(300);
       digitalWrite(tone_pin, LOW);
 
-      digitalWrite(Mortor, HIGH);
+      digitalWrite(Mortor, HIGH); // not a read code
     }
   }
 }

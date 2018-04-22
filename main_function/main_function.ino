@@ -25,7 +25,7 @@ void setup() {
     pinMode(tone_pin, OUTPUT);
 
     pinMode(cs, INPUT);
-    //  pinMode(dat1,INPUT);
+     // pinMode(dat1,INPUT);
     pinMode(vib_pin, INPUT);
     pinMode(MOSI, INPUT);
     pinMode(MISO, INPUT);
