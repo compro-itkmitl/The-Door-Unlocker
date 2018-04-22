@@ -61,7 +61,7 @@
 |<a href="https://www.facebook.com/Rew.Tinnapat.Plangsri"><img src="https://scontent.fbkk1-3.fna.fbcdn.net/v/t1.0-9/25994744_886719591488774_7134321554187652847_n.jpg?_nc_fx=fbkk1-6&_nc_cat=0&oh=1067d08ffb5b85f78a584c0661ec15ed&oe=5B6E970E" width="200px"></a>|<a href="https://www.facebook.com/tt.taitana"><img src="https://scontent.fbkk1-3.fna.fbcdn.net/v/t1.0-9/30742537_1943829689020591_2765776466958788222_n.jpg?_nc_fx=fbkk1-6&_nc_cat=0&oh=03be43b8f36823442d440a536bb2575b&oe=5B6501EF" width="200px"></a>|<a href="https://www.facebook.com/no.jk21"><img src="https://scontent.fbkk1-6.fna.fbcdn.net/v/t1.0-9/21191899_1932349573687299_4353133770523507972_n.jpg?_nc_fx=fbkk1-6&_nc_cat=0&oh=026f6352566f24e72d379193eed99646&oe=5B707A6D" width="200px"></a>|
 | :--------: | :--------: | :--------: |
 | <b> [@tintinap](https://github.com/tintinap) | <b> [@wannowo](https://github.com/wannowo) | <b> [@jacktnp](https://github.com/jacktnp) |
-| <b>Tinnapat Plungsri | <b>Taitana Yuume | <b>Thanapon Wongprasert |
+| <b>Tinnapat Plangsri | <b>Taitana Yumee | <b>Thanapon Wongprasert |
 | <b>60070028 | <b>60070029 | <b>60070031 |
 
 ---
