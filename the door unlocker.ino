@@ -58,14 +58,22 @@ void setup(){
 }
 
 
-void void loop()
+void loop()
 {
-    if(1){//bluetooth func
+    if(1){//bluetooth func available
 
         for (int i = 0; i < count; ++i)
         {
-            /* code */
+            if(ID == selectBLTH(printLineN(i))){
+                reAdy_knock(password);
+            }
         }
 
     }
+
+}
+
+
+void register_bt(){
+
 }
