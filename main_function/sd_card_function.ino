@@ -108,8 +108,8 @@ String selectID(String Currentln) {
     return id_number; // "2"
 }
 
-int chipSelectConnected(int cs) {
-    if (SD.begin(cs)) {
+int chipSelectConnected(int CS) {
+    if (SD.begin(CS)) {
         return 1;
     } else {
         return 0;

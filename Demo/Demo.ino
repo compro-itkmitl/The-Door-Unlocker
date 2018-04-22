@@ -19,10 +19,10 @@ String data[20] = {""} ,temp[20] = {""};
 String fileName = "unrepeat.txt";
 String strmyFile = "";
 //==========================================================================
-void checkSD(int cs){
+void checkSD(int CS){
     Serial.println("Checking SD card...");
     delay(300);
-    if (!SD.begin(cs)) {
+    if (!SD.begin(CS)) {
         Serial.println("Card failed.");
         return;
     }
@@ -126,8 +126,8 @@ String selectID(String Currentln) {
     return id_number; // "2"
 }
 
-int chipSelectConnected(int cs) {
-    if (SD.begin(cs)) {
+int chipSelectConnected(int CS) {
+    if (SD.begin(CS)) {
         return 1;
     } else {
         return 0;
