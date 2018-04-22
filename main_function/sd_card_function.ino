@@ -1,6 +1,3 @@
-#include <SD.h>
-#include <SPI.h>
-
 void checkSD(int CS){
     Serial.println("Checking SD card...");
     delay(300);
@@ -44,15 +41,15 @@ String printLineN(int lineN) {
         }
     }
     //Now we are at the right line
-    String text_line = "";
+    String Currentln = "";
     while (true) {
         cr = myFile.read();
-        text_line += cr;
+        Currentln += cr;
         if (cr == '\n') {
             break;
         }
     }
-    return text_line; //2,00:CD:FE:8B:70:01,[6:7:10:9:8]  if lineN == 2
+    return Currentln; //2,00:CD:FE:8B:70:01,[6:7:10:9:8]  if lineN == 2
 }
 
 String selectBLTH(String Currentln) {
@@ -60,11 +57,7 @@ String selectBLTH(String Currentln) {
     String mac_address = "";
     bool start = false;
     for (int i=0; i < Currentln.length(); i++) {
-<<<<<<< HEAD
-    if (Currentln[i] == ',' && start == false) { // 1st ,
-=======
         if (Currentln[i] == ',' && start == false) { // 1st ,
->>>>>>> developing
             start = true;
             continue;
         }
@@ -84,11 +77,7 @@ String selectKNCK(String Currentln) {
     String knocking_list = "";
     bool start = false;
     for (int i=0; i < Currentln.length(); i++) {
-<<<<<<< HEAD
-    if (Currentln[i] == '[' && start == false) { // 1st ,
-=======
         if (Currentln[i] == '[' && start == false) { // 1st ,
->>>>>>> developing
             start = true;
             continue;
         }
@@ -115,7 +104,11 @@ String selectID(String Currentln) {
     }
     return id_number; // "2"
 }
-<<<<<<< HEAD
 
-=======
->>>>>>> developing
+int chipSelectConnected(int CS) {
+    if (SD.begin(CS)) {
+        return 1;
+    } else {
+        return 0;
+    }
+}

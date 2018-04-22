@@ -60,11 +60,7 @@ String selectBLTH(String Currentln) {
     String mac_address = "";
     bool start = false;
     for (int i=0; i < Currentln.length(); i++) {
-<<<<<<< HEAD
-    if (Currentln[i] == ',' && start == false) { // 1st ,
-=======
         if (Currentln[i] == ',' && start == false) { // 1st ,
->>>>>>> developing
             start = true;
             continue;
         }
@@ -84,11 +80,7 @@ String selectKNCK(String Currentln) {
     String knocking_list = "";
     bool start = false;
     for (int i=0; i < Currentln.length(); i++) {
-<<<<<<< HEAD
-    if (Currentln[i] == '[' && start == false) { // 1st ,
-=======
         if (Currentln[i] == '[' && start == false) { // 1st ,
->>>>>>> developing
             start = true;
             continue;
         }
@@ -115,7 +107,3 @@ String selectID(String Currentln) {
     }
     return id_number; // "2"
 }
-<<<<<<< HEAD
-
-=======
->>>>>>> developing
