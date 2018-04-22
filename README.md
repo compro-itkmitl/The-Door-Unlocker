@@ -28,26 +28,11 @@
 
 ### ☁️ Installation
 
-1. **Download and Install Arduino IDE**
-  - Go to https://www.arduino.cc/ and click on **SOFTWARE** menu and select **DOWNLOADS**
-  - Select computer's operating system for coding on Arduino IDE.
-  - Click on **JUST DOWNLOAD** for download program or **CONTRIBUTE & DOWNLOAD** for donate developer and download program.
-  - Unzip the file and run arduino.exe for installation Arduino IDE.
-
-2. **Setting Arduino IDE**
-  - Go to File >> Preference, it will show preference window.
-  - Pasted http://arduino.esp8266.com/stable/package_esp8266com_index.json in **Additional Boards Manager URLs** and click **OK**.
-  
-3. **Download and Install Driver**
-  - Go to https://www.silabs.com/products/development-tools/software/usb-to-uart-bridge-vcp-drivers.
-  - Select computer's operating system for download software.
-  - Install the driver on the computer.
-
-4. **Download and Install Library**
-  - Go to https://github.com/compro-itkmitl/Sleep-Apnea-Tester/tree/master/Library
-  - Download all ZIP file.
-  - Open Arduino IDE and select Sketch >> Include Library >> Add .zip library.
-  - Select ZIP file and click on "open".
+ **Download and Install Arduino IDE**
+  1. Go to https://www.arduino.cc/ and click on **SOFTWARE** menu and select **DOWNLOADS**
+  2. Select computer's operating system for coding on Arduino IDE.
+  3. Click on **JUST DOWNLOAD** for download program or **CONTRIBUTE & DOWNLOAD** for donate developer and download program.
+  4. Unzip the file and run arduino.exe for installation Arduino IDE.
 
 ---
 
