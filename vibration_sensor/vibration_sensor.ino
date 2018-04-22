@@ -22,17 +22,17 @@ String fileName = "test.txt";
 
 
 void setup(){
-  //setup pin
+    //setup pin
 
-  pinMode(tone_pin, OUTPUT);
+    pinMode(tone_pin, OUTPUT);
 
-  pinMode(cs, INPUT);
-//  pinMode(dat1,INPUT);
-  pinMode(vib_pin, INPUT);
-  pinMode(MOSI, INPUT);
-  pinMode(MISO, INPUT);
-  pinMode(CLK, INPUT);
-  pinMode(data1, INPUT);
+    pinMode(cs, INPUT);
+    //  pinMode(dat1,INPUT);
+    pinMode(vib_pin, INPUT);
+    pinMode(MOSI, INPUT);
+    pinMode(MISO, INPUT);
+    pinMode(CLK, INPUT);
+    pinMode(data1, INPUT);
 //    pinMode(dat2,INPUT);
 
     Serial.begin(9600);
@@ -51,7 +51,6 @@ void setup(){
 }
 
 
-void loop()
-{
+void loop() {
     
 }

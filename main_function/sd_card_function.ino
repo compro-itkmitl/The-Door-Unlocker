@@ -1,6 +1,3 @@
-#include <SD.h>
-#include <SPI.h>
-
 void checkSD(int CS){
     Serial.println("Checking SD card...");
     delay(300);
