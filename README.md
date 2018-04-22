@@ -37,7 +37,7 @@
 
 ### 🔌 How to use
 
-|<img src="pic/how to use.png" alt="how to use">|
+<img src="pic/how to use.png" alt="how to use">
 
 มีสองวิธีในการใช้งาน
 
