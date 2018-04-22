@@ -9,14 +9,14 @@
 #define MISO 12
 #define CLK 13
 #define data1 A0
-//#define cs 4
+#define cs 4
 
 File myFile;
 
 int id=0, dataNum=2;
 String data[20] = {""} ,temp[20] = {""};
 
-String fileName = "unrepeat.txt";
+String fileName = "pattern.txt";
 String strmyFile = "";
 //==========================================================================
 void checkSD(int CS){
@@ -139,7 +139,7 @@ void setup(){
   //setup pin
     pinMode(tone_pin, OUTPUT);
 
-    pinMode(4, INPUT);
+    pinMode(cs, INPUT);
     //  pinMode(dat1,INPUT);
     pinMode(vib_pin, INPUT);
     pinMode(MOSI, INPUT);
@@ -153,7 +153,7 @@ void setup(){
         ;
     }
     //checking sd card before enter the void loop.
-    checkSD(4); 
+    checkSD(cs); 
     //==============label part===================
     myFile = SD.open(fileName, FILE_WRITE);
 
@@ -175,10 +175,17 @@ void setup(){
 void loop() {
     int label_length = -1; // the 1st char is 0
     int current_id = 0;
-    if (chipSelectConnected(4)) {
+    bool appendNewMacAddress = 0;
+    String tempmyFile = "";
+    String command = "";
+    //=======================================Bluetooth zone===============================================
+    String currentMacAddress = "00:A0:C9:14:C8:30"; //w8 4 blutooth command
+    String insideMacAddress = "";
+    //====================================================================================================
+    if (chipSelectConnected(cs)) {
         //============Define port zone=============
-        data[0] = analogRead(data1);  // Bluetooth mac address
-        data[1] = "[7:8:9:8:6]";
+        data[0] = currentMacAddress;  // Bluetooth mac address
+        data[1] = "[7:8:9:8:6]";  //knocking pattern
         //===============checking text in the file================
         strmyFile = "";
         while (myFile.available()) {
@@ -203,47 +210,73 @@ void loop() {
         if (label_length < strmyFile.length()) { // there're data in the file
             id = current_id;
         } 
-        //====================check and write zone==============
-        if (strmyFile.length() == label_length) { //1st round of collecting
-            id++;
-            //============Serial part==========
-            Serial.print("id: ");
-            Serial.print(id);
-            Serial.print("       Mac_address : ");
-            Serial.print(data[0]);
-            Serial.print("       KNCK_PAT : ");
-            Serial.println(data[1]);
-            //============File part===========
-            writeSD(myFile, fileName, dataNum);
-            //============Temp part===========
-            for (int i = 0; i < dataNum; i++) {
-                temp[i] = data[i];
-            }
+        //-------------------------start codeing here for now!!!------------------------
+        //=======================================register zone================================================
+        if (Serial.available() != 0) {
+            command = Serial.readString();
+            if (command == "register") {
+                for (int i=0; i < id; i++) {
+                    insideMacAddress = selectBLTH(printLineN(i));
+                    if (insideMacAddress == currentMacAddress) { //there is a same mac_address
+                        mac_found;// replace the old one & appendNewMacAddress = 0
+                    } else { //new mac_address
+                        appendNewMacAddress = 1;
+                        if 
 
-        } else { // not the 1st round
-            if (data[0] == temp[0] && data[1] == temp[1]) {
-                ; // skip it
-            } else { //no repeat data
+                    }
+                }
+            }
+        }
+        //====================================================================================================
+        //====================check and write zone==============
+        if (appendNewMacAddress) {
+            if (strmyFile.length() == label_length) { //1st round of collecting
                 id++;
-                //============File part===========
-                writeSD(myFile, fileName, dataNum);
-                //============Serial part=========
+                //============Serial part==========
                 Serial.print("id: ");
                 Serial.print(id);
                 Serial.print("       Mac_address : ");
                 Serial.print(data[0]);
                 Serial.print("       KNCK_PAT : ");
                 Serial.println(data[1]);
+                //============File part===========
+                writeSD(myFile, fileName, dataNum);
+                //============Temp part===========
+                for (int i = 0; i < dataNum; i++) {
+                    temp[i] = data[i];
+                }
+
+            } else { // not the 1st round
+                if (data[0] == temp[0] && data[1] == temp[1]) {
+                    ; // skip it
+                } else { //no repeat data
+                    id++;
+                    //============File part===========
+                    writeSD(myFile, fileName, dataNum);
+                    //============Serial part=========
+                    Serial.print("id: ");
+                    Serial.print(id);
+                    Serial.print("       Mac_address : ");
+                    Serial.print(data[0]);
+                    Serial.print("       KNCK_PAT : ");
+                    Serial.println(data[1]);
+                }  
+                //============Temp part===========
+                for (int i=0; i < dataNum; i++) {
+                    temp[i] = data[i];
+                } 
             }
-            
-            //============Temp part===========
-            for (int i=0; i < dataNum; i++) {
-                temp[i] = data[i];
-            } 
+            appendNewMacAddress = 0;
+        } else { //replace knocking_pattern
+
+            // while (myFile.available()) { //keeping old data
+            //     char ltr = myFile.read();
+            //     tempmyFile += ltr;
+            }
         }
     } else {
         Serial.println("Card not found.");
-        while (!chipSelectConnected(4)) {
+        while (!chipSelectConnected(cs)) {
             ;
         }
     }
