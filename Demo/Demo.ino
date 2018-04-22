@@ -14,7 +14,6 @@
 File myFile;
 
 int id=0, dataNum=2;
-bool  First_round = 1;
 String data[20] = {""} ,temp[20] = {""};
 
 String fileName = "unrepeat.txt";
@@ -138,16 +137,15 @@ int chipSelectConnected(int cs) {
 //==========================================================================
 void setup(){
   //setup pin
+    pinMode(tone_pin, OUTPUT);
 
-  pinMode(tone_pin, OUTPUT);
-
-  pinMode(4, INPUT);
-//  pinMode(dat1,INPUT);
-  pinMode(vib_pin, INPUT);
-  pinMode(MOSI, INPUT);
-  pinMode(MISO, INPUT);
-  pinMode(CLK, INPUT);
-  pinMode(data1, INPUT);
+    pinMode(4, INPUT);
+    //  pinMode(dat1,INPUT);
+    pinMode(vib_pin, INPUT);
+    pinMode(MOSI, INPUT);
+    pinMode(MISO, INPUT);
+    pinMode(CLK, INPUT);
+    pinMode(data1, INPUT);
 //    pinMode(dat2,INPUT);
 
     Serial.begin(9600);
@@ -180,7 +178,7 @@ void loop() {
     if (chipSelectConnected(4)) {
         //============Define port zone=============
         data[0] = analogRead(data1);  // Bluetooth mac address
-        data[1] = 5;
+        data[1] = "[7:8:9:8:6]";
         //===============checking text in the file================
         strmyFile = "";
         while (myFile.available()) {

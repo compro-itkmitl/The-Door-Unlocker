@@ -15,7 +15,6 @@ File myFile;
 
 int id=0, dataNum=2;
 
-bool  First_round = 1;
 String data[20] = {""} ,temp[20] = {""};
 
 String fileName = "test.txt";
