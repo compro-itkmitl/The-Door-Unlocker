@@ -44,15 +44,15 @@ String printLineN(int lineN) {
         }
     }
     //Now we are at the right line
-    String text_line = "";
+    String Currentln = "";
     while (true) {
         cr = myFile.read();
-        text_line += cr;
+        Currentln += cr;
         if (cr == '\n') {
             break;
         }
     }
-    return text_line; //2,00:CD:FE:8B:70:01,[6:7:10:9:8]  if lineN == 2
+    return Currentln; //2,00:CD:FE:8B:70:01,[6:7:10:9:8]  if lineN == 2
 }
 
 String selectBLTH(String Currentln) {
@@ -106,4 +106,12 @@ String selectID(String Currentln) {
         }
     }
     return id_number; // "2"
+}
+
+int chipSelectConnected(int cs) {
+    if (SD.begin(cs)) {
+        return 1;
+    } else {
+        return 0;
+    }
 }
