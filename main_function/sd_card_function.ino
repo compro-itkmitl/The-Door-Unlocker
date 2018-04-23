@@ -52,28 +52,8 @@ String printLineN(int lineN) {
     return Currentln; //2,[6:7:10:9:8]  if lineN == 2
 }
 
-String selectBLTH(String Currentln) {
-    //ex of Currentln: 2,00:CD:FE:8B:70:01,[6:7:10:9:8]
-    String mac_address = "";
-    bool start = false;
-    for (int i=0; i < Currentln.length(); i++) {
-        if (Currentln[i] == ',' && start == false) { // 1st ,
-            start = true;
-            continue;
-        }
-        if (start) {
-            if (Currentln[i] == ',') {
-                break;
-            } else {
-                mac_address += Currentln[i];
-            }
-        }
-    }    
-    return mac_address; //00:CD:FE:8B:70:01
-}
-
 String selectKNCK(String Currentln) {
-    //ex of Currentln: 2,00:CD:FE:8B:70:01,[6:7:10:9:8]
+    //ex of Currentln: 2,[6:7:10:9:8]
     String knocking_list = "";
     bool start = false;
     for (int i=0; i < Currentln.length(); i++) {
@@ -90,19 +70,6 @@ String selectKNCK(String Currentln) {
         }
     }
     return knocking_list; //6:7:10:9:8
-}
-
-String selectID(String Currentln) {
-    //ex of Currentln: 2,00:CD:FE:8B:70:01,[6:7:10:9:8]
-    String id_number = "";
-    for (int i = 0; i < Currentln.length(); i++) {
-        if (Currentln[i] == ',') {
-            break;
-        } else {
-            id_number += Currentln[i];
-        }
-    }
-    return id_number; // "2"
 }
 
 int chipSelectConnected(int CS) {
