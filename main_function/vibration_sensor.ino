@@ -1,9 +1,9 @@
-int TP_init(){
+int TP_init() {
     delay(10);
     return pulseIn(vib_pin, HIGH);
 }
 
-int selector(){
+int selector() {
     int count = 0, id_num = 0;
     while (count != 5){
         if(id_num > 5){
@@ -80,4 +80,10 @@ void reAdy_knock(String password) {
             mortorRoll();
         }
     }
+}
+
+void tonePin() {
+    digitalWrite(tone_pin, HIGH);
+    delay(300);
+    digitalWrite(tone_pin, LOW);
 }

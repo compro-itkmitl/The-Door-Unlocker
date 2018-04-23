@@ -25,11 +25,11 @@ void writeSD(File myFile, String fileName, int dataNum){
 String printLineN(int lineN) {
     /*ex text in example.txt
     ID,BLETH,KNCK_PAT
-    1,00:CD:FE:8B:70:00,[5:1:2:3:4]
-    2,00:CD:FE:8B:70:01,[6:7:10:9:8]
-    3,00:A0:C9:14:C8:29,[1:2:3:4:5]
-    4,00:CD:FE:14:70:00,[7:8:9:8:6]
-    5,00:A0:C9:14:C8:30,[1:1:1:1] */
+    1,[5:1:2:3:4]
+    2,[6:7:10:9:8]
+    3,[1:2:3:4:5]
+    4,[7:8:9:8:6]
+    5,[1:1:1:1] */
 
     myFile.seek(0);
     char cr;
@@ -49,7 +49,7 @@ String printLineN(int lineN) {
             break;
         }
     }
-    return Currentln; //2,00:CD:FE:8B:70:01,[6:7:10:9:8]  if lineN == 2
+    return Currentln; //2,[6:7:10:9:8]  if lineN == 2
 }
 
 String selectBLTH(String Currentln) {

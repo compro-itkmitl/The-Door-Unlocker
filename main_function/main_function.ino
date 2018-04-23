@@ -39,7 +39,7 @@ void setup() {
     pinMode(MISO, INPUT);
     pinMode(CLK, INPUT);
     pinMode(data1, INPUT);
-//    pinMode(dat2,INPUT);
+    // pinMode(dat2,INPUT);
 
     Serial.begin(9600);
     while (!Serial) {
@@ -63,10 +63,10 @@ void setup() {
     //===========================================
 }
 
+int numPat = 1; //since 2nd pattern
 void loop() {
     int label_length = -1; // the 1st char is 0
     int current_id = 0;
-    int numPat = 1; //since 2nd pattern
     if (chipSelectConnected(cs)) {
         //===============checking text in the file================
         strmyFile = "";
@@ -119,6 +119,7 @@ void loop() {
                 for (int i = 0; i < dataNum; i++) {
                     temp[i] = data[i];
                 }
+                tonePin();
             } else { // not the 1st round
                 if (data[0] == temp[0] && data[1] == temp[1]) {
                     Serial.println("Use the different pattern.");
@@ -147,10 +148,61 @@ void loop() {
                 for (int i=0; i < dataNum; i++) {
                     temp[i] = data[i];
                 }
+                tonePin();
                 numPat++;
             }
         } else if (numPat == 5){ // ready for unlock system
             Serial.println("Done setting");
+            numPat = 1;
+        } else if (numPat == 6) {// edit password
+            int pattern = selector();
+            String pattern_temp[5];
+            for (int i=1; i < 6; i++) {
+                pattern_temp[i] = selectKNCK(printLineN(i));
+            }
+            SD.remove(fileName);
+            //crete new password
+            Serial.println("Enter your new pattern: ");
+            String N_password = "[";
+            for (int i = 0; i < 5; i++) {
+                String messure = (String)TP_init();
+                if (messure == "0") {
+                    i--;
+                    continue;
+                }
+                Serial.println(messure);
+                N_password += messure;
+                N_password += ':';
+            }
+            N_password += ']';
+            //edit step
+            for (int i=0; i < 6;i++) {
+                if (i == 0) {
+                    myFile = SD.open(fileName, FILE_WRITE);
+                    myFile.print("ID,KNCK_PAT");
+                    myFile.println();
+                    myFile.close();
+                }
+                if (i == pattern) {
+                    myFile = SD.open(fileName, FILE_WRITE);
+                    if (myFile) {
+                        myFile.print(i);
+                        myFile.print(","); myFile.print(N_password);
+                    }
+                    myFile.println();
+                    myFile.close();
+                } else { // non same pattern number and label
+                    myFile = SD.open(fileName, FILE_WRITE);
+                    if (myFile) {
+                        myFile.print(i);
+                        myFile.print(","); myFile.print(pattern_temp[i]);
+                    }
+                    myFile.println();
+                    myFile.close();
+                }
+            }
+            Serial.println("Done editting.");
+            tonePin();
         } else { //w8ing for incoming pattern
             int line = selector();
             Serial.print("Enter pattern number "); Serial.print(line); Serial.println(" :");
