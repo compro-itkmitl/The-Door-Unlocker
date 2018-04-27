@@ -23,9 +23,18 @@ int selector(){
   return id_num;
 }
 
+<<<<<<< Updated upstream
 void reAdy_knock(String password) {
     int check = 0, afk = 0;
     int readyToBreak = 0;
+=======
+void reAdy_knock(string password[]){
+  int check = 0, afk = 0;
+  int id_use = selector();    
+  while(bluetooth avaliable){
+    delay(100);
+    int messure = TP_init();
+>>>>>>> Stashed changes
 
     while (1) {
         delay(100);
