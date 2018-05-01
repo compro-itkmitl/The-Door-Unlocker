@@ -50,6 +50,7 @@
 
 ![preview](https://i.imgur.com/nczJbce.gif)
 
+(if can't preview please see this link [https://i.imgur.com/nczJbce.gif](https://i.imgur.com/nczJbce.gif))
 ---
 
 ### 🐼 Our Team | สมาชิกกลุ่ม
