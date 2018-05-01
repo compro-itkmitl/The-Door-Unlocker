@@ -17,9 +17,10 @@
 | :--------: | :--------: | :--------: |:--------: | 
 |   ![Wires](pic/wire.jpg)  |  ![3D Model](pic/3dmodel.png)   | ![Door Knob Grip Handle](pic/doorknob.jpg)  | ![Potentiometer](https://i.imgur.com/mRxvNqv.jpg)|
 
-| NRF24L01 Module | รางถ่าน AA 10 ช่อง | ถ่าน 10 ก้อน |
-| :--------: | :--------: | :--------: |
-| ![NRF24L01](https://i.imgur.com/mLsJxgr.jpg) | ![AAx10](https://i.imgur.com/QNzTIyu.jpg) | ![AA](https://i.imgur.com/QdpM1gu.jpg)|
+| Arduino nano | NRF24L01 Module | รางถ่าน AA 10 ช่อง | ถ่าน 10 ก้อน |
+| :--------: | :--------: | :--------: | :--------: |
+| ![Arduino nano](https://i.imgur.com/nC2IQSx.jpg) | ![NRF24L01](https://i.imgur.com/mLsJxgr.jpg) | ![AAx10](https://i.imgur.com/QNzTIyu.jpg) | ![AA](https://i.imgur.com/QdpM1gu.jpg)|
+
 ---
 
 ### 📚 Library
@@ -51,6 +52,13 @@
 
 <img src="pic/how to use.png" alt="how to use" width="100%">
 
+---
+
+### ⚡️ Preview
+
+<img src="https://lh4.googleusercontent.com/Dxq1LOtQCTtqby-aGWvrIbwrPhfEURRIrQ3CaKrOEdaH68QfnsHLkUnrqFvO4Cu26ShniVCXSWTplFy0qspE=w1920-h887-rw" alt="preview" width="100%">
+
+---
 
 ### 🐼 Our Team | สมาชิกกลุ่ม
 
