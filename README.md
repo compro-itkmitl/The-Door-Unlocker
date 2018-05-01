@@ -13,9 +13,9 @@
 | :--------: | :--------: | :--------: | :--------: | 
 |   ![Arduino UNO R3 ](pic/arduino.png)   |   ![Vibration sensor SW-420](pic/sw420.jpg)|   ![Motor](pic/motor.jpg)   |   ![Motor Driver A4988](pic/motordriver.jpg)   | 
 
-| Wires | 3D Model | Door Knob Grip Handle | Potentiometer |
-| :--------: | :--------: | :--------: |:--------: | 
-|   ![Wires](pic/wire.jpg)  |  ![3D Model](pic/3dmodel.png)   | ![Door Knob Grip Handle](pic/doorknob.jpg)  | ![Potentiometer](https://i.imgur.com/mRxvNqv.jpg)|
+| Wires | 3D Model | Door Knob Grip Handle | Potentiometer | Buzzer |
+| :--------: | :--------: | :--------: | :--------: | :--------: |  
+|   ![Wires](pic/wire.jpg)  |  ![3D Model](pic/3dmodel.png)   | ![Door Knob Grip Handle](pic/doorknob.jpg)  | ![Potentiometer](https://i.imgur.com/mRxvNqv.jpg) | ![Buzzer](https://i.imgur.com/Nnv1iBM.jpg) |
 
 | Arduino nano | NRF24L01 Module | รางถ่าน AA 10 ช่อง | ถ่าน 10 ก้อน |
 | :--------: | :--------: | :--------: | :--------: |
@@ -26,6 +26,7 @@
 ### 📚 Library
 
 1. NRF24L01 Library [http://www.allarduino.com/download/nRF24L01p.rar](http://www.allarduino.com/download/nRF24L01p.rar)
+2. SPI Library [https://www.arduino.cc/en/Reference/SPI](https://www.arduino.cc/en/Reference/SPI)
 
 ---
 
