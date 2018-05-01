@@ -17,7 +17,7 @@
 | :--------: | :--------: | :--------: | :--------: | :--------: |  
 |   ![Wires](pic/wire.jpg)  |  ![3D Model](pic/3dmodel.png)   | ![Door Knob Grip Handle](pic/doorknob.jpg)  | ![Potentiometer](https://i.imgur.com/mRxvNqv.jpg) | ![Buzzer](https://i.imgur.com/Nnv1iBM.jpg) |
 
-| Arduino nano | NRF24L01 Module | รางถ่าน AA 10 ช่อง | ถ่าน 10 ก้อน |
+| Arduino nano | NRF24L01 Module | Batteries Box | Batteries |
 | :--------: | :--------: | :--------: | :--------: |
 | ![Arduino nano](https://i.imgur.com/nC2IQSx.jpg) | ![NRF24L01](https://i.imgur.com/mLsJxgr.jpg) | ![AAx10](https://i.imgur.com/QNzTIyu.jpg) | ![AA](https://i.imgur.com/QdpM1gu.jpg)|
 
@@ -38,15 +38,6 @@
   - Click on **JUST DOWNLOAD** for download program or **CONTRIBUTE & DOWNLOAD** for donate developer and download program.
   - Unzip the file and run arduino.exe for installation Arduino IDE.
 
-2. **Setting Arduino IDE**
-  - Go to File >> Preference, it will show preference window.
-  - Pasted http://arduino.esp8266.com/stable/package_esp8266com_index.json in **Additional Boards Manager URLs** and click **OK**.
-  
-3. **Download and Install Driver**
-  - Go to https://www.silabs.com/products/development-tools/software/usb-to-uart-bridge-vcp-drivers.
-  - Select computer's operating system for download software.
-  - Install the driver on the computer.
-
 ---
 
 ### 🔌 How to use
@@ -57,7 +48,7 @@
 
 ### ⚡️ Preview
 
-<img src="https://i.imgur.com/nczJbce.gif" alt="preview" width="100%">
+![preview](https://i.imgur.com/nczJbce.gif)
 
 ---
 
