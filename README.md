@@ -56,7 +56,7 @@
 
 ### ⚡️ Preview
 
-<img src="https://lh4.googleusercontent.com/Dxq1LOtQCTtqby-aGWvrIbwrPhfEURRIrQ3CaKrOEdaH68QfnsHLkUnrqFvO4Cu26ShniVCXSWTplFy0qspE=w1920-h887-rw" alt="preview" width="100%">
+<img src="https://i.imgur.com/nczJbce.gif" alt="preview" width="100%">
 
 ---
 
